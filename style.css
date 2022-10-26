@@ -1,0 +1,149 @@
+* {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+ul {
+    list-style-type: none;
+   }
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    max-height: 100%;
+    gap: 24px;
+    background-color: lightgray;
+}
+
+.header {
+    grid-area: 1/1/2/5;
+    display: grid;
+    background-color: white;
+}
+
+.sidebar {
+    grid-area: 1/1/5/2;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+ul {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo_img {
+    height: auto;
+    width: 64px;
+}
+
+.logo > p {
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.sidebar > div {
+    height: auto;
+    height: fit-content;
+}
+
+.logo {
+
+}
+
+.sidebar > div > ul {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: fit-content;
+    margin: 10px;
+}
+
+.sidebar > div > ul > li {
+    margin: 10px;
+}
+
+.utility {
+
+}
+
+.main {
+    grid-area: 2/2/5/5;
+    display: grid;
+    max-width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+    gap: 24px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects {
+    grid-area: 1/1/2/2;
+    display: grid;
+    max-width: 100%;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-columns: repeat(2, 2fr);
+    gap: 30px;
+}
+
+.news {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.projects > .card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .projects > div:first-child {
+    height: fit-content;
+} */
+
+.announcements, .trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements, .trending, .project > p {
+    height: fit-content;
+    font-size: 22px;
+}
+
+div {
+    border: 1px solid red;
+}
