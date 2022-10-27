@@ -1,17 +1,29 @@
 * {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     padding: 0;
-}
-
-p {
-    font-family: sans-serif;
-    font-size: 18px;
 }
 
 h1 {
     font-family: sans-serif;
     font-size: 22px;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+.sidebar img {
+    filter: invert(100%) sepia(47%) saturate(324%) hue-rotate(184deg) brightness(109%) contrast(101%);
+}
+
+.main > div > h1 {
+    padding: 10px 0;
+}
+
+.main > div > div > h1 {
+    padding: 10px 0;
 }
 
 ul {
@@ -23,14 +35,65 @@ ul {
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 4fr;
     max-height: 100%;
-    gap: 24px;
     background-color: lightgray;
 }
 
 .header {
-    grid-area: 1/1/2/5;
+    grid-area: 1/2/2/5;
     display: grid;
     background-color: white;
+    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#searchbar {
+    height: 32px;
+    width: 80%;
+    border-radius: 16px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 80px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+}
+
+.title {
+    display: flex;
+}
+
+.title > .avatar {
+    width: 80px;
+    height: 80px;
+}   
+
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 80px;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+    margin-left: 25px;
 }
 
 .sidebar {
@@ -47,30 +110,10 @@ ul {
     color: white;
 }
 
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#logo_img {
-    height: auto;
-    width: 64px;
-}
-
-.logo > p {
-    font-family: sans-serif;
-    font-size: 32px;
-    font-weight: bolder;
-}
-
 .sidebar > div {
     height: auto;
     height: fit-content;
-}
-
-.logo {
-
+    padding: 20px 10px;
 }
 
 .sidebar > div > ul {
@@ -96,6 +139,7 @@ ul {
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
     gap: 24px;
+    padding: 24px;
 }
 
 .project {
@@ -107,7 +151,7 @@ ul {
     grid-area: 1/1/2/2;
     display: grid;
     max-width: 100%;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 2fr));
     grid-template-columns: repeat(2, 2fr);
     gap: 30px;
 }
@@ -122,17 +166,38 @@ ul {
 
 .card {
     background-color: white;
-    border-radius: 12px;
+    border-radius: 16px;
+}
+
+.favorite {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: fit-content;
+}
+
+.icon {
+    width: 32px;
+    padding: 0 10px;
 }
 
 .projects > .card {
     display: flex;
     flex-direction: column;
+    border-left: 14px solid orange;
+    padding: 40px 20px;
+    height: auto;
 }
 
-/* .projects > div:first-child {
+.card > h1 {
     height: fit-content;
-} */
+}
+
+.card > p {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: gray;
+}
 
 .announcements, .trending {
     display: flex;
@@ -146,4 +211,24 @@ ul {
 
 div {
     border: 1px solid red;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo_icon {
+    height: auto;
+    width: 64px;
+    fill: white;
+    padding-right: 10px;
+}
+
+.logo > p {
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: bolder;
+    color: white;
 }
